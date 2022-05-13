@@ -1,10 +1,10 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&display=swap');
 
 :root {
     --primary: #fe2c55;
     --black: #000;
-    --text-color: #333;
+    --text-color: #161823;
     --white: white;
 
     //DefaultLayout
@@ -27,6 +27,26 @@ body {
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     color: var(--text-color);
+
+    //Custom tooltip
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-box {
+        font-weight: 600;
+        font-style: 1.6rem;
+        border-radius: 8px;
+        background-color: rgba(84, 84, 84, 0.92);
+        line-height: 2.2rem;
+    }
+    .tippy-box[data-placement='bottom'] > .tippy-arrow::before {
+        top: -8px;
+    }
+    .tippy-content {
+        padding: 8px 9px;
+    }
 }
 button,
 input,
