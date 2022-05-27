@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,7 +20,7 @@ import 'tippy.js/dist/tippy.css'; // optional
 import { InboxIcon, MessageIcon, UploadIcon } from '~/Components/Icons';
 import Image from '~/Components/Image';
 import Search from '../Search';
-
+import routesConfig from '~/Config/Routes';
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
@@ -38,11 +39,6 @@ const MENU_ITEMS = [
                     type: 'language',
                     code: 'vi',
                     title: 'Tiếng Việt',
-                },
-                {
-                    type: 'language',
-                    code: 'kr',
-                    title: 'Korea',
                 },
             ],
         },
@@ -99,9 +95,10 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt="Tiktok" />
+                <Link to={routesConfig.home} className={cx('logo-link')}>
+                    <img src={images.logo} alt="Tiktok" />
+                </Link>
 
-                {/* Search */}
                 <Search />
 
                 <div className={cx('actions')}>
