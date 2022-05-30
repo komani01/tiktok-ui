@@ -8,7 +8,7 @@ import AccountItem from '~/Components/AccountItem';
 import { SearchIcon } from '~/Components/Icons';
 import { useEffect, useState, useRef } from 'react';
 import { useDebounce } from '~/Hooks';
-import * as searchService from '~/API-Service/searchService';
+import * as searchService from '~/Service/searchService';
 
 const cx = classNames.bind(styles);
 
